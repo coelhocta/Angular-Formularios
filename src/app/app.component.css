@@ -1,0 +1,22 @@
+.logo {
+    max-height: 34px;
+    background-color: #3F51B5;
+}
+
+.sidenav {
+    background-color: #3F51B5;
+    width: max-content;
+}
+
+.sidenav a {
+    color: #FFF;
+}
+
+.sidenav i {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 16px;
+    background-color: #FFF;
+}
