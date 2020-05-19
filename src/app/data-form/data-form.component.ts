@@ -75,7 +75,7 @@ export class DataFormComponent implements OnInit {
       }
     });
 
-    this.formulario.get('nome').setValue('Loiane');
+    this.formulario.get('nome').setValue('André');
   }
 
 resetaDadosForm() {
