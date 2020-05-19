@@ -1,1 +1,95 @@
-<p>data-form works!</p>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <mat-grid-list cols="8" rowHeight="100px">
+
+        <mat-grid-tile colspan="4">
+            <div class="form-group">
+                <mat-form-field appearance="fill" autofilled="false">
+                    <mat-label>Nome</mat-label>
+                    <input id="nome" matInput placeholder="Nome" formControlName="nome">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile colspan="4">
+            <div class="form-group">
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input id="email" matInput placeholder="nome@email.com" formControlName="email">
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <div formGroupName="endereco">
+            <mat-grid-tile colspan="2">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>CEP</mat-label>
+                        <input id="cep" matInput placeholder="12345-678" formControlName="cep" (blur)="consultaCEP()">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="2">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>numero</mat-label>
+                        <input id="numero" matInput placeholder="Número" formControlName="numero">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="4">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Complemento</mat-label>
+                        <input id="complemento" matInput placeholder="Complemento" formControlName="complemento">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="8">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Rua</mat-label>
+                        <input id="rua" matInput formControlName="rua">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="3">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Bairro</mat-label>
+                        <input id="bairro" matInput formControlName="bairro">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="3">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Cidade</mat-label>
+                        <input id="cidade" matInput formControlName="cidade">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="2">
+                <div class="form-group">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Estado</mat-label>
+                        <input id="estado" matInput formControlName="estado">
+                    </mat-form-field>
+                </div>
+            </mat-grid-tile>
+        </div>
+
+    </mat-grid-list>
+
+
+
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button (click)="resetar()" mat-raised-button>Cancelar</button>
+</form>
+<br><br>
+<app-form-debug [form]="formulario"></app-form-debug>

@@ -14,11 +14,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
-
+import { FormDebugComponent } from './form-debug/form-debug.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [FormDebugComponent,],
   imports: [
     CommonModule,
 
@@ -40,6 +42,9 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatButtonModule,
     
+    
+    HttpClientModule,
+    FormsModule,
   ],
   exports: [
     MatIconModule,
@@ -60,6 +65,9 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
     MatButtonModule,
     
+    FormDebugComponent,
+    HttpClientModule,
+    FormsModule,
     ],
 })
 export class SharedModule { }

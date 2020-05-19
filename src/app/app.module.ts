@@ -1,20 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { DataFormComponent } from './data-form/data-form.component';
-import { FormsModule } from '@angular/forms';
-import { SharedModule } from './shared.module';
 import { TemplateFormModule } from './template-form/template-form.module';
+import { DataFormModule } from './data-form/data-form.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +23,9 @@ import { TemplateFormModule } from './template-form/template-form.module';
 
     TemplateFormModule,
     SharedModule,
+
+    ReactiveFormsModule,
+    DataFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

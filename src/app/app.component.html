@@ -10,17 +10,18 @@
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list class="nav-list">
 
+            <a mat-list-item [routerLink]="['/dataForm']" routerLinkActive="router-link-active">
+                <i class="material-icons">
+                    school
+                </i> Form - Data Driven
+            </a>
+
             <a mat-list-item [routerLink]="['/templateForm']" routerLinkActive="router-link-active">
                 <i class="material-icons">
                     home
                 </i> Form - Template Driven
             </a>
 
-            <a mat-list-item [routerLink]="['/dataForm']" routerLinkActive="router-link-active">
-                <i class="material-icons">
-                    school
-                </i> Form - Data Driven
-            </a>
 
         </mat-nav-list>
     </mat-sidenav>
